@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "title": "Login Page Not Working",
+        "description": "User unable to login using correct credentials.",
+        "customer": "Rahim Uddin",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2026-03-01"
+    },
+    {
+        "id": 2,
+        "title": "Payment Gateway Error",
+        "description": "Payment fails during checkout process.",
+        "customer": "Karim Hasan",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2026-03-01"
+    },
+    {
+        "id": 3,
+        "title": "Profile Image Upload Issue",
+        "description": "Customer cannot upload profile picture.",
+        "customer": "Nusrat Jahan",
+        "priority": "Medium",
+        "status": "Open",
+        "createdAt": "2026-03-02"
+    },
+    {
+        "id": 4,
+        "title": "Dashboard Loading Slow",
+        "description": "Dashboard takes too much time to load.",
+        "customer": "Sabbir Ahmed",
+        "priority": "Medium",
+        "status": "Open",
+        "createdAt": "2026-03-02"
+    },
+    {
+        "id": 5,
+        "title": "Forgot Password Email Not Sending",
+        "description": "Reset password email is not received.",
+        "customer": "Mim Akter",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2026-03-02"
+    },
+    {
+        "id": 6,
+        "title": "Mobile Responsive Issue",
+        "description": "Website layout breaks on small devices.",
+        "customer": "Tanvir Hossain",
+        "priority": "Low",
+        "status": "Open",
+        "createdAt": "2026-03-03"
+    },
+    {
+        "id": 7,
+        "title": "Search Feature Not Returning Results",
+        "description": "Search bar returns empty results for valid queries.",
+        "customer": "Jannat Sultana",
+        "priority": "Medium",
+        "status": "Open",
+        "createdAt": "2026-03-03"
+    },
+    {
+        "id": 8,
+        "title": "Order History Missing",
+        "description": "User cannot see previous orders in dashboard.",
+        "customer": "Arif Chowdhury",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2026-03-03"
+    },
+    {
+        "id": 9,
+        "title": "Notification Not Working",
+        "description": "Push notifications are not being received.",
+        "customer": "Sumaiya Islam",
+        "priority": "Low",
+        "status": "Open",
+        "createdAt": "2026-03-04"
+    },
+    {
+        "id": 10,
+        "title": "Error 500 on Settings Page",
+        "description": "Server error occurs when opening settings page.",
+        "customer": "Rafiul Alam",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2026-03-04"
+    },
+    {
+        "id": 11,
+        "title": "Language Switch Not Updating",
+        "description": "Changing language does not update content.",
+        "customer": "Sadia Rahman",
+        "priority": "Medium",
+        "status": "Open",
+        "createdAt": "2026-03-04"
+    },
+    {
+        "id": 12,
+        "title": "Coupon Code Invalid",
+        "description": "Valid coupon code shows invalid message.",
+        "customer": "Mahin Talukder",
+        "priority": "Low",
+        "status": "Open",
+        "createdAt": "2026-03-04"
+    },
+    {
+        "id": 13,
+        "title": "Live Chat Not Connecting",
+        "description": "Live chat support does not connect to agent.",
+        "customer": "Faria Khan",
+        "priority": "Medium",
+        "status": "Open",
+        "createdAt": "2026-03-04"
+    },
+    {
+        "id": 14,
+        "title": "Account Suspended Without Reason",
+        "description": "User account suspended unexpectedly.",
+        "customer": "Imran Hossain",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2026-03-04"
+    },
+    {
+        "id": 15,
+        "title": "Download Report Not Working",
+        "description": "Reports fail to download in PDF format.",
+        "customer": "Tania Akter",
+        "priority": "Low",
+        "status": "Open",
+        "createdAt": "2026-03-04"
+    }
+]
