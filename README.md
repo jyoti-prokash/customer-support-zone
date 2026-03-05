@@ -1,16 +1,37 @@
-# React + Vite
+1. What is JSX, and why is it used?
+Ans: JSX (JavaScript XML) হলো JavaScript এর একটি syntax extension যা React এ ব্যবহার করা হয়। JSX ব্যবহার করে আমরা HTML এর মত করে UI লিখতে পারি JavaScript এর ভিতরে।
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. What is the difference between State and Props?
+State	                                       Props
+Component এর ভিতরের data	     Parent component থেকে আসা data
+Change করা যায়	                  Change করা যায় না (read-only)
+useState দিয়ে manage করা হয়	      Parent component pass করে
 
-Currently, two official plugins are available:
+3. What is the useState hook, and how does it work?
+Ans: useState হলো React এর একটি hook যা functional component এ state ব্যবহার করতে দেয়।
+How it works:
+1.useState(0) initial value set করে
+2.count বর্তমান value
+3.setCount() দিয়ে value update করা হয়
+4.Update হলে component re-render হয়
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4. How can you share state between components in React?
+Ans: React এ state share করার সবচেয়ে common উপায় হলো Lifting State Up।
+মানে state কে parent component এ রাখা হয় এবং props দিয়ে child component এ পাঠানো হয়।
 
-## React Compiler
+5. How is event handling done in React?
+Ans: React এ event handling করা হয় camelCase syntax দিয়ে এবং function pass করে।
+Example:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+function App() {
 
-## Expanding the ESLint configuration
+  const handleClick = () => {
+    alert("Button clicked");
+  };
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  return (
+    <button onClick={handleClick}>
+      Click Me
+    </button>
+  );
+}

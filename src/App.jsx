@@ -9,11 +9,16 @@ import { Bounce, ToastContainer } from "react-toastify";
 
 const TicketsPromise = fetch("/tickets.json").then((res) => res.json());
 function App() {
+  const [tickets, setTickets] = useState([]);
+  console.log(tickets);
   const [selectedTask, setSelectedTask] = useState([]);
   const [resolvedTask, setResolvedTask] = useState([]);
   // remove selected task from Task Status when marked as complete
   const removedSelectedTask = (id) => {
     setSelectedTask(selectedTask.filter((task) => task.id !== id));
+    const remainingTickets = tickets.filter(t => t.id !== id);
+  setTickets(remainingTickets);
+  
   }
 
   return (
@@ -30,6 +35,8 @@ function App() {
             }
           >
             <AllCustomerTickets
+            tickets={tickets}
+            setTickets={setTickets}
               TicketsPromise={TicketsPromise}
               selectedTask={selectedTask}
               setSelectedTask={setSelectedTask}

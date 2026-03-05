@@ -1,8 +1,11 @@
-import React, { use } from "react";
+import React, { use, useEffect } from "react";
 import TicketsCard from "../TicktesCard/TicketsCard";
 
-const AllCustomerTickets = ({ TicketsPromise, selectedTask, setSelectedTask}) => {
-  const tickets = use(TicketsPromise);
+const AllCustomerTickets = ({tickets, TicketsPromise, selectedTask, setSelectedTask, setTickets}) => {
+  const ticketsData = use(TicketsPromise);
+  useEffect(()=>{
+    setTickets(ticketsData);
+  }, [ticketsData, setTickets])
   return (
     <div>
       <div>
