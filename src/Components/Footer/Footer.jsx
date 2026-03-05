@@ -12,11 +12,8 @@ const Footer = () => {
             <h2 className="text-white text-lg font-semibold mb-4">
               CS — Ticket System
             </h2>
-            <p className="text-sm leading-6">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+            <p className="text-sm leading-6 max-w-xs md:max-w-none">
+            This project is a React-based Customer Support Zone designed to display customer tickets, track progress, and mark them as resolved. It follows a Figma design and includes additional features like status management, responsiveness, and toast notifications using React-Toastify.
             </p>
           </div>
 

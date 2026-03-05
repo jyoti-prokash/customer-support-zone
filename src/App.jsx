@@ -10,7 +10,6 @@ import { Bounce, ToastContainer } from "react-toastify";
 const TicketsPromise = fetch("/tickets.json").then((res) => res.json());
 function App() {
   const [tickets, setTickets] = useState([]);
-  console.log(tickets);
   const [selectedTask, setSelectedTask] = useState([]);
   const [resolvedTask, setResolvedTask] = useState([]);
   // remove selected task from Task Status when marked as complete
@@ -18,12 +17,11 @@ function App() {
     setSelectedTask(selectedTask.filter((task) => task.id !== id));
     const remainingTickets = tickets.filter(t => t.id !== id);
   setTickets(remainingTickets);
-  
   }
 
   return (
     <>
-      <section className="w-300 mx-auto">
+      <section className="w-full max-w-7xl mx-auto">
         <Navbar />
         <Banner selectedTask={selectedTask} resolvedTask={resolvedTask} />
         <div className="flex flex-wrap gap-10 my-10">
