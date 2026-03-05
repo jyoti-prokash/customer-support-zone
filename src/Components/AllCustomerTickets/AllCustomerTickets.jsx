@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import TicketsCard from "../TicktesCard/TicketsCard";
 
-const AllCustomerTickets = ({ TicketsPromise, selectedTask, setSelectedTask, count, setCount }) => {
+const AllCustomerTickets = ({ TicketsPromise, selectedTask, setSelectedTask}) => {
   const tickets = use(TicketsPromise);
   return (
     <div>
@@ -10,7 +10,7 @@ const AllCustomerTickets = ({ TicketsPromise, selectedTask, setSelectedTask, cou
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {tickets.map((ticket) => (
-          <TicketsCard count={count} setCount={setCount} key={ticket.id} ticket={ticket} selectedTask={selectedTask} setSelectedTask={setSelectedTask}></TicketsCard>
+          <TicketsCard key={ticket.id} ticket={ticket} selectedTask={selectedTask} setSelectedTask={setSelectedTask}></TicketsCard>
         ))}
       </div>
     </div>

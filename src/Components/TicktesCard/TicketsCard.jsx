@@ -1,6 +1,7 @@
 import { FaCalendar } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
 
-const TicketsCard = ({ticket, selectedTask, setSelectedTask, count, setCount}) => {
+const TicketsCard = ({ticket, selectedTask, setSelectedTask}) => {
     const { id, title, description, customer, priority, status, createdAt } = ticket;
     
     const priorityStyle =
@@ -11,13 +12,13 @@ const TicketsCard = ({ticket, selectedTask, setSelectedTask, count, setCount}) =
       : "text-green-600";
       const handleSelected = (ticket) => {
         setSelectedTask([...selectedTask, ticket]);
-        setCount(count + 1);
+        toast("Successfully added to Task Status");
       }
     return (
-        <div className='bg-white rounded-lg shadow-sm p-5 hover:shadow-md transition duration-300 cursor-pointer'>
+        <div onClick={()=>{handleSelected(ticket)}} className='bg-white rounded-lg shadow-sm p-5 hover:shadow-md transition duration-300 cursor-pointer'>
                 <div className='flex items-center justify-between p-3 rounded-lg'>
                     <h1 className='font-semibold text-gray-800 text-sm'>{title}</h1>
-                    <button onClick={()=>{handleSelected(ticket)}} className='btn btn-sm btn-primary'>{status}</button>
+                    <p className='bg-green-100 text-green-700 px-3 py-1 text-xs rounded-full font-medium'>{status}</p>
                 </div>
                     <p className='text-xs text-gray-500 mb-4 leading-5'>{description}</p>
                 <div className='flex items-center justify-between mt-3'>
